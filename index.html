@@ -1,7 +1,15 @@
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title> Welcome to Linjie's website </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- msal.js with a fallback to backup CDN -->
+    <script type="text/javascript" src="https://alcdn.msauth.net/lib/1.2.1/js/msal.js" integrity="sha384-9TV1245fz+BaI+VvCjMYL0YDMElLBwNS84v3mY57pXNOt6xcUYch2QLImaTahcOP" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      if(typeof Msal === 'undefined')document.write(unescape("%3Cscript src='https://alcdn.msftauth.net/lib/1.2.1/js/msal.js' type='text/javascript' integrity='sha384-m/3NDUcz4krpIIiHgpeO0O8uxSghb+lfBTngquAo2Zuy2fEF+YgFeP08PWFo5FiJ' crossorigin='anonymous'%3E%3C/script%3E"));
+    </script>
+	
 	<style type="text/css">
 		body, html {
 			height: 100%;
@@ -44,14 +52,16 @@
 		}
 	</style>
 </head>
-<div class="hero-image">
-	<div class="hero-text">
-		<h1 style="font-size:50px">I am Linjie Liu</h1>
-		<p>And I'm majoring in Computer Science</p>
-		<a href= "home.html">
-			<button>Hire me</button>
-		</a>
+<body>
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1 style="font-size:50px">I am Linjie Liu</h1>
+			<p>And I'm majoring in Computer Science</p>
+			<a href= "home.html">
+				<button onclick="signIn()">Hire me</button>
+			</a>
+		</div>
 	</div>
-</div>
-</div>
+</body>
+
 </html>
